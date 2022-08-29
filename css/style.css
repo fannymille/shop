@@ -1,91 +1,67 @@
-.body {
+body {
     background-color: #5c48d2;
     font-family: Verdana, Tahoma, Arial, sans-serif;
     font-size: 16px;
-    border: 3px solid red;
-    /* cadre */
     height: 100%;
 }
 
-.para1 {
+h1 {
     font-size: 48px;
-    font-color: white;
     line-height: 200px;
+    color: white;
+    /* permet de centrer le titre sur l'axe vertical */
     text-align: center;
+    /* permet de centrer le titre sur l'axe horizontal */
     letter-spacing: 10px;
-    border: 3px solid black;
-    /* cadre */
 }
 
-.main-block {
+main {
     width: 1024px;
     background-color: white;
     height: 500px;
+    /* cette hauteur sera supprime par la suite car c'est la contenu du bloc qui determinera la hauteur  */
     border-radius: 20px;
     margin: 0 auto;
-    /*  marges latérales automatiques*/
+    /* permet de positionner un bloc au centre de l'axe horizontal -  creation de marges laterales automatiquement */
     text-align: center;
     letter-spacing: 2px;
-    border: 3px solid black;
-    /* cadre */
     justify-content: space-between;
 }
 
-.lien {
-    height: 50px;
-    font-size: 20px;
-    font-color: #190f33;
-    font-color: #5c48d2;
-    /* couleur au survol du lien */
-    border: 1px solid black;
-    /* cadre */
-    flex: 1;
-    /* prendra 1/4 de la largeur totale */
-    padding-left: 10px;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    padding-right: 10px;
-    margin: auto;
-}
-
-.nav {
+nav {
+    height: 100px;
     display: flex;
-    /* permet d'aligner horizontalement les noms des liens de la barre de navigation */
+    /* pour que tous les elements se repartissent l'espace sur l'axe horizontal; pour cela il faut utiliser 2 proprietes: display: flex quil faut ajouter a l'element parent qui est NAV et pour chaque element enfant A ajouter la propriete flex:1 RESULTAT; les elements a se repartissent tout l'espace sur l'axe vertical et horizontal, repartie de maniere egale entre les 4 enfants  */
 }
 
-a {
+nav a {
     -webkit-transition: color 2s;
     transition: color 2s;
     text-decoration: none;
     /* texte non souligne lien */
+    border: 1px solid green;
+    /* pour chaque element enfant A ajouter la propriete flex:1 RESULTAT; les elements a se repartissent tout l'espace sur l'axe vertical et horizontal, repartie de maniere egale entre les 4 enfants  */
 }
 
-a:hover {
+nav a {
+    flex: 1;
+    /* prendra 1/4 de la largeur totale */
+    display: flex;
+    justify-content: center;
+    font-color: #190f33;
+    font-size: 20px;
+    height: 50px;
+    font-color: #5c48d2;
+    /* couleur au survol du lien */
+}
+
+nav a:hover {
     color: red;
 }
 
-.img {
-    /* pour que l'image occupe toute la largeur du bloc */
+.main-img {
+    height: 1400px;
+    width: 854px;
     object-fit: cover;
-    /* pour conserver les proportions de l'image, propriété object-fit : cover.*/
-    /* justify; effectue l'alignement de axe horizontal = axe principal;  alignement dans la meme direction que la flex-direction */
-    /* align; effectue l'alignement de l'axe vertical = axe transversal; alignement dans la direction perpendiculaire de la flex-direction */
-    /* Alignement sur l'axe principal ( horizontal ) avec justify-content
-	/* la valeur initiale de justify-content  est flex-start. */
-    /*margin-bottom: 50px;
-    margin-right: 50px;
-    margin-left: 50px;
-    margin-top: 50px;*/
-    border: 3px solid black;
-    display: flexbox;
-}
-
-.footer {
-    text-align: center;
-    padding-left: 10px;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    padding-right: 10px;
-    border: 3px solid black;
-    /* cadre */
+    /* pour conserver les proportions de l'image, propriété object-fit : cover et  pour que l'image occupe toute la largeur du bloc */
 }
