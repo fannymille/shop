@@ -1,5 +1,5 @@
 body {
-    background-color: #5c48d2;
+    background-color: #d7df01;
     font-family: Verdana, Tahoma, Arial, sans-serif;
     font-size: 16px;
     height: 100%;
@@ -18,29 +18,15 @@ h1 {
 main {
     width: 1024px;
     background-color: white;
-    height: 500px;
-    /* cette hauteur sera supprime par la suite car c'est la contenu du bloc qui determinera la hauteur  */
     border-radius: 20px;
     margin: 0 auto;
     /* permet de positionner un bloc au centre de l'axe horizontal -  creation de marges laterales automatiquement */
-    text-align: center;
-    letter-spacing: 2px;
-    justify-content: space-between;
 }
 
 nav {
     height: 100px;
     display: flex;
     /* pour que tous les elements se repartissent l'espace sur l'axe horizontal; pour cela il faut utiliser 2 proprietes: display: flex quil faut ajouter a l'element parent qui est NAV et pour chaque element enfant A ajouter la propriete flex:1 RESULTAT; les elements a se repartissent tout l'espace sur l'axe vertical et horizontal, repartie de maniere egale entre les 4 enfants  */
-}
-
-nav a {
-    -webkit-transition: color 2s;
-    transition: color 2s;
-    text-decoration: none;
-    /* texte non souligne lien */
-    border: 1px solid green;
-    /* pour chaque element enfant A ajouter la propriete flex:1 RESULTAT; les elements a se repartissent tout l'espace sur l'axe vertical et horizontal, repartie de maniere egale entre les 4 enfants  */
 }
 
 nav a {
@@ -53,6 +39,11 @@ nav a {
     height: 50px;
     font-color: #5c48d2;
     /* couleur au survol du lien */
+    -webkit-transition: color 2s;
+    transition: color 2s;
+    text-decoration: none;
+    /* texte non souligne lien */
+    border: 1px solid green;
 }
 
 nav a:hover {
@@ -60,8 +51,82 @@ nav a:hover {
 }
 
 .main-img {
-    height: 1400px;
-    width: 854px;
+    height: 400px;
+    width: 1024px;
     object-fit: cover;
-    /* pour conserver les proportions de l'image, propriété object-fit : cover et  pour que l'image occupe toute la largeur du bloc */
+    /* pour conserver les proportions de l'image,  et  pour que l'image occupe toute la largeur du bloc ; image non deformee mais peu etre coupee */
+}
+
+section {
+    padding: 100px;
+}
+
+#about-me,
+#city {
+    background-color: #190f33;
+}
+
+.informations {
+    background-color: red;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+}
+
+.informations img {
+    height: 250px;
+    width: 250px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: #fcc01a 2px solid;
+    margin-right: 80px;
+}
+
+.informations-texts {
+    background-color: green;
+}
+
+.name,
+.city {
+    color: #190f33;
+}
+
+.name {
+    font-size: 38px;
+    font-weight: bold;
+    margin-bottom: 50px;
+}
+
+.city {
+    font-size: 30px;
+    font-style: italic;
+}
+
+h2,
+h3 {
+    color: #190f33;
+    font-size: bold;
+}
+
+h3 {
+    font-size: 26px;
+    margin-bottom: 40px;
+}
+
+h2 {
+    font-size: 30px;
+    text-align: center;
+    margin-bottom: 80px;
+}
+
+#education p {
+    text-align: center;
+}
+
+#education img {
+    height: 100px;
+}
+
+#education div {
+    border: red solid 2px;
 }
